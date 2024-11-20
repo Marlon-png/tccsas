@@ -1,0 +1,121 @@
+/* Estilo geral */
+body {
+    font-family: 'Press Start 2P', cursive; /* Fonte 8-bit */
+    background-color: #f7f9fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    text-align: center;
+}
+
+/* Títulos e textos */
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Container de itens arrastáveis */
+.items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+/* Wrapper para os itens arrastáveis */
+.draggable-wrapper {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center; /* Centraliza a imagem verticalmente */
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    background-color: #f0f0f0;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Estilo das imagens arrastáveis */
+.draggable {
+    width: 150px; /* Tamanho fixo das imagens */
+    height: 150px;
+    object-fit: contain; /* Ajusta a imagem para não distorcer */
+    cursor: grab;
+    transition: transform 0.2s ease;
+}
+
+.draggable:active {
+    cursor: grabbing;
+    transform: scale(1.1);
+}
+
+/* Container de zonas de drop */
+.dropzones-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilo das zonas de drop */
+.dropzone {
+    width: 250px;
+    height: 250px;
+    background-color: #e8f0fe;
+    border: 3px dashed #2196f3;
+    border-radius: 15px;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Flexbox para centralizar o conteúdo */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    text-align: center; /* Garante que o texto seja centralizado */
+    overflow: hidden; /* Impede que as imagens saiam do limite da zona */
+}
+
+.dropzone:hover {
+    background-color: #dbe9fd;
+    box-shadow: 0px 4px 10px rgba(33, 150, 243, 0.3);
+}
+
+/* Feedback de acerto (correto) */
+.correct {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(76, 175, 80, 0.5);
+}
+
+/* Feedback de erro (errado) */
+.wrong {
+    background-color: #ff6347;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(255, 99, 71, 0.5);
+}
+
+/* Ajuste das imagens dentro das zonas de drop */
+.dropzone img {
+    width: 100%; /* Ajusta a largura da imagem para preencher a zona */
+    height: 100%; /* Ajusta a altura da imagem para preencher a zona */
+    object-fit: contain; /* Faz a imagem manter sua proporção sem distorcer */
+    object-position: center; /* Centraliza a imagem dentro da zona */
+    border-radius: 10px;
+}

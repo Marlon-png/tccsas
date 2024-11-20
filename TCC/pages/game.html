@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="/images/brain.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop com Imagens</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>Interlink Game</h1>
+    <p>Arraste os itens para as zonas corretas!</p>
+
+    <div class="items-container">
+        <!-- Imagens arrastáveis -->
+        <div class="draggable-wrapper">
+            <img id="Plasmídeo" class="draggable" src="/images/plasmideo.png" alt="Plasmídeo" draggable="true" ondragstart="drag(event)">
+        </div>
+        <div class="draggable-wrapper">
+            <img id="Glicina" class="draggable" src="/images/glicina.png" alt="Glicina" draggable="true" ondragstart="drag(event)">
+        </div>
+        <div class="draggable-wrapper">
+            <img id="Cromossomo" class="draggable" src="/images/cromossomos.png" alt="cromossomos" draggable="true" ondragstart="drag(event)">
+        </div>
+        <div class="draggable-wrapper">
+            <img id="RNA" class="draggable" src="/images/rna.png" alt="RNA" draggable="true" ondragstart="drag(event)">
+        </div>
+        <div class="draggable-wrapper">
+            <img id="Adenina" class="draggable" src="/images/adenina.png" alt="Adenina" draggable="true" ondragstart="drag(event)">
+        </div>
+        <div class="draggable-wrapper">
+            <img id="Timina" class="draggable" src="/images/timina.png" alt="Timina" draggable="true" ondragstart="drag(event)">
+        </div>
+    </div>
+
+    <div class="dropzones-container">
+        <!-- Zonas de drop -->
+        <div id="nome-Plasmídeo" class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)">
+            Arraste o Plasmídeo aqui
+        </div>
+        <div id="nome-Glicina" class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)">
+            Arraste a Glicina aqui
+        </div>
+        <div id="nome-Cromossomo" class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)">
+            Arraste o Cromossomo aqui
+        </div>
+        <div id="nome-RNA" class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)">
+            Arraste o RNA aqui
+        </div>
+        <div id="nome-Adenina" class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)">
+            Arraste a Adenina aqui
+        </div>
+        <div id="nome-Timina" class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)">
+            Arraste a Timina aqui
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
